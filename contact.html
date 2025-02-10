@@ -10,7 +10,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: #f5f5f5;
+      background: #f5f5f5; /* Softer off-white background */
       color: #333;
     }
     a {
@@ -22,10 +22,10 @@
       margin: auto;
       padding: 0 20px;
     }
-
+    
     /* Header */
     header {
-      background: #2c3e50;
+      background: #000; /* Solid black background */
       padding: 20px 0;
       color: #fff;
     }
@@ -53,42 +53,28 @@
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #e67e22;
+      color: #f1c40f; /* Yellow accent */
     }
-
+    
     /* Banner Section */
     #banner {
-      background: url('https://source.unsplash.com/1600x400/?african,contact') no-repeat center center/cover;
+      background: #000; /* Plain black background */
       height: 400px;
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-align: center;
     }
-    #banner::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    #banner .banner-content {
-      position: relative;
-      z-index: 1;
-    }
     #banner h2 {
       font-size: 48px;
       margin: 0;
     }
-
+    
     /* Contact Section */
     #contact {
       padding: 60px 20px;
-      background: #fff;
+      background: #f5f5f5; /* Off-white background to match body */
     }
     #contact h2 {
       text-align: center;
@@ -102,17 +88,19 @@
       gap: 20px;
     }
     .contact-form, .contact-info {
-      background: #f9f9f9;
+      background: #fff;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-top: 4px solid #f1c40f; /* Yellow accent border */
       flex: 1 1 45%;
       min-width: 300px;
     }
     .contact-form h3, .contact-info h3 {
       margin-top: 0;
     }
-    .contact-form input, .contact-form textarea {
+    .contact-form input, 
+    .contact-form textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 20px;
@@ -121,26 +109,32 @@
       font-size: 16px;
     }
     .contact-form button {
-      background: #2c3e50;
+      background: #000; /* Matches header */
       color: #fff;
       border: none;
       padding: 10px 20px;
       cursor: pointer;
       font-size: 18px;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
       border-radius: 4px;
     }
     .contact-form button:hover {
-      background: #e67e22;
+      background: #f1c40f;
+      color: #000;
     }
     .contact-info p {
       font-size: 16px;
       margin: 10px 0;
     }
-
+    .contact-info img {
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    
     /* Footer */
     footer {
-      background: #2c3e50;
+      background: #000; /* Solid black background */
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -174,6 +168,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -213,10 +208,8 @@
           <p><strong>Opening Hours:</strong></p>
           <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
           <p>Saturday - Sunday: 12:00 PM - 11:00 PM</p>
-          <!-- Optional Map Placeholder -->
-          <div style="margin-top:20px;">
-            <img src="https://source.unsplash.com/600x400/?map" alt="Map Placeholder" style="width:100%; border-radius: 5px;">
-          </div>
+          <!-- Map Placeholder -->
+          <img src="https://source.unsplash.com/600x400/?map" alt="Map Placeholder">
         </div>
       </div>
     </div>
