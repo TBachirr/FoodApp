@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste of Africa - About Us</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: #2c3e50;
+      padding: 20px 0;
+      color: #fff;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin-left: 20px;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e67e22;
+    }
+    
+    /* Banner Section */
+    #banner {
+      background: url('https://source.unsplash.com/1600x400/?african,heritage') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    #banner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    #banner .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    #banner h2 {
+      font-size: 48px;
+      margin: 0;
+    }
+    
+    /* Our Story Section */
+    #our-story {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    #our-story h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    #our-story p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+    }
+    
+    /* Our Mission Section */
+    #our-mission {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    #our-mission h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    #our-mission p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+    }
+    
+    /* Our Team Section */
+    #our-team {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    #our-team h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-member {
+      background: #f5f5f5;
+      margin: 10px;
+      padding: 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .team-member h3 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+    }
+    .team-member p {
+      font-size: 16px;
+      color: #777;
+    }
+    
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+      .team-members {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Taste of Africa</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section id="banner">
+    <div class="banner-content">
+      <h2>Discover Our Story</h2>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="our-story">
+    <div class="container">
+      <h2>Our Story</h2>
+      <p>
+        Founded in the heart of Africa, Taste of Africa began as a passion project to share authentic African flavors with the world. Our journey started with a simple idea—to celebrate the rich traditions and vibrant culinary heritage of Africa. Every dish we serve is steeped in history, lovingly prepared using time-honored recipes passed down through generations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Mission Section -->
+  <section id="our-mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to create a dining experience that connects you to the soul of Africa. We source the freshest ingredients and embrace sustainable practices to deliver genuine, flavorful dishes. At Taste of Africa, every meal is a celebration of cultural heritage, innovation, and community.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section id="our-team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="https://source.unsplash.com/300x200/?chef,portrait" alt="Chef Amina">
+          <h3>Chef Amina</h3>
+          <p>Head Chef – Mastering traditional recipes with a creative flair.</p>
+        </div>
+        <div class="team-member">
+          <img src="https://source.unsplash.com/300x200/?chef,african" alt="Chef Kwame">
+          <h3>Chef Kwame</h3>
+          <p>Sous Chef – Expert in blending bold flavors and spices from across Africa.</p>
+        </div>
+        <div class="team-member">
+          <img src="https://source.unsplash.com/300x200/?restaurant,staff" alt="Manager Fatou">
+          <h3>Manager Fatou</h3>
+          <p>Restaurant Manager – Ensuring every guest enjoys an exceptional dining experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

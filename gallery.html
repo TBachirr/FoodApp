@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste of Africa - Gallery</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: #2c3e50;
+      padding: 20px 0;
+      color: #fff;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin-left: 20px;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e67e22;
+    }
+    
+    /* Banner Section */
+    #banner {
+      background: url('https://source.unsplash.com/1600x400/?african,art') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    #banner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    #banner .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    #banner h2 {
+      font-size: 48px;
+      margin: 0;
+    }
+    
+    /* Gallery Section */
+    #gallery {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    #gallery h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+      display: block;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Taste of Africa</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Banner Section -->
+  <section id="banner">
+    <div class="banner-content">
+      <h2>Gallery</h2>
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Our Culinary Journey</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,food" alt="African Dish">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,restaurant" alt="African Restaurant">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,culture" alt="African Culture">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,market" alt="African Market">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,chef" alt="African Chef">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,spices" alt="African Spices">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,dance" alt="African Dance">
+        </div>
+        <div class="gallery-item">
+          <img src="https://source.unsplash.com/400x300/?african,landscape" alt="African Landscape">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
