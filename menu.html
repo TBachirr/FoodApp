@@ -22,7 +22,12 @@
       margin: auto;
       padding: 0 20px;
     }
-
+    
+    /* Highlight Class */
+    .highlight {
+      color: #f1c40f; /* Yellow accent */
+    }
+    
     /* Header */
     header {
       background: #000; /* Changed to solid black */
@@ -55,7 +60,7 @@
     nav a:hover {
       color: #f1c40f; /* Yellow accent */
     }
-
+    
     /* Banner Section */
     #banner {
       background: #000; /* Plain black background */
@@ -70,7 +75,7 @@
       font-size: 48px;
       margin: 0;
     }
-
+    
     /* Menu Sections */
     .menu-section {
       padding: 60px 0;
@@ -134,7 +139,7 @@
       background: #f1c40f;
       color: #000;
     }
-
+    
     /* Footer */
     footer {
       background: #000; /* Solid black */
@@ -142,7 +147,7 @@
       text-align: center;
       padding: 20px;
     }
-
+    
     /* Responsive Styles */
     @media (max-width: 768px) {
       header .container {
@@ -175,18 +180,20 @@
       </nav>
     </div>
   </header>
-
+  
   <!-- Banner Section -->
   <section id="banner">
     <div class="banner-content">
-      <h2>Our Exquisite Menu</h2>
+      <!-- Preserve full text; wrap only the word "Menu" in a span -->
+      <h2>Our Exquisite <span class="highlight">Menu</span></h2>
     </div>
   </section>
-
+  
   <!-- Starters Section -->
   <section class="menu-section" id="starters">
     <div class="container">
-      <h2>Starters</h2>
+      <!-- Preserve text; wrap "Starters" -->
+      <h2>Our <span class="highlight">Starters</span></h2>
       <div class="menu-items">
         <div class="menu-item">
           <img src="https://source.unsplash.com/300x200/?african,appetizer" alt="Spicy Plantain Chips">
@@ -205,11 +212,12 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Main Courses Section -->
   <section class="menu-section" id="main-courses">
     <div class="container">
-      <h2>Main Courses</h2>
+      <!-- Preserve text; wrap "Courses" (or "Main Courses") -->
+      <h2>Our Main <span class="highlight">Courses</span></h2>
       <div class="menu-items">
         <div class="menu-item">
           <img src="https://source.unsplash.com/300x200/?jollof,rice" alt="Jollof Rice">
@@ -235,11 +243,12 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Desserts Section -->
   <section class="menu-section" id="desserts">
     <div class="container">
-      <h2>Desserts</h2>
+      <!-- Preserve text; wrap "Desserts" -->
+      <h2>Our <span class="highlight">Desserts</span></h2>
       <div class="menu-items">
         <div class="menu-item">
           <img src="https://source.unsplash.com/300x200/?dessert,african" alt="Mango Sorbet">
@@ -258,11 +267,12 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Drinks Section -->
   <section class="menu-section" id="drinks">
     <div class="container">
-      <h2>Drinks</h2>
+      <!-- Preserve text; wrap "Drinks" -->
+      <h2>Our <span class="highlight">Drinks</span></h2>
       <div class="menu-items">
         <div class="menu-item">
           <img src="https://source.unsplash.com/300x200/?african,drink" alt="Ginger Beer">
@@ -281,11 +291,10 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>

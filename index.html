@@ -105,7 +105,7 @@
     /* About Section */
     #about {
       padding: 60px 20px;
-      background: #f5f5f5; /* Softer off-white background */
+      background: #f5f5f5;
       text-align: center;
     }
     
@@ -127,7 +127,7 @@
     /* Menu Section */
     #menu {
       padding: 60px 20px;
-      background: #f5f5f5; /* Softer off-white background */
+      background: #f5f5f5;
     }
     
     #menu .container {
@@ -182,7 +182,7 @@
     /* Gallery Section */
     #gallery {
       padding: 60px 20px;
-      background: #f5f5f5; /* Softer off-white background */
+      background: #f5f5f5;
       text-align: center;
     }
     
@@ -222,7 +222,7 @@
     /* Contact Section */
     #contact {
       padding: 60px 20px;
-      background: #f5f5f5; /* Softer off-white background */
+      background: #f5f5f5;
       text-align: center;
     }
     
@@ -290,6 +290,19 @@
         align-items: center;
       }
     }
+    
+    /* Simple Scroll Animation Styles */
+    /* All sections start hidden and translated down a bit */
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    /* When visible, sections fade in and move to their original place */
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -335,17 +348,20 @@
       <h2>Our Signature <span class="highlight">Dishes</span></h2>
       <div class="menu-items">
         <div class="menu-item">
-          <img src="https://source.unsplash.com/300x200/?jollof,food" alt="Jollof Rice">
+          <!-- Local image for Jollof Rice -->
+          <img src="images/jollof_rice.jpg" alt="Jollof Rice">
           <h3>Jollof Rice</h3>
           <p>A delicious blend of tomatoes, spices, and rice.</p>
         </div>
         <div class="menu-item">
-          <img src="https://source.unsplash.com/300x200/?suya,food" alt="Suya">
+          <!-- Local image for Suya -->
+          <img src="images/suya.jpg" alt="Suya">
           <h3>Suya</h3>
           <p>Grilled skewers seasoned with spicy peanut sauce.</p>
         </div>
         <div class="menu-item">
-          <img src="https://source.unsplash.com/300x200/?fufu,food" alt="Fufu & Soup">
+          <!-- Local image for Fufu & Soup -->
+          <img src="images/fufu.jpg" alt="Fufu & Soup">
           <h3>Fufu & Soup</h3>
           <p>A traditional staple served with a hearty soup.</p>
         </div>
@@ -358,13 +374,16 @@
     <h2>Our <span class="highlight">Gallery</span></h2>
     <div class="gallery-container">
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/300x200/?african,cuisine" alt="Gallery Image 1">
+        <!-- Local image for Gallery Image 1 -->
+        <img src="images/r1.jpg" alt="Gallery Image 1">
       </div>
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/300x200/?african,restaurant" alt="Gallery Image 2">
+        <!-- Local image for Gallery Image 2 -->
+        <img src="images/r2.jpg" alt="Gallery Image 2">
       </div>
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/300x200/?africa,food" alt="Gallery Image 3">
+        <!-- Local image for Gallery Image 3 -->
+        <img src="images/r3.jpg" alt="Gallery Image 3">
       </div>
     </div>
   </section>
@@ -389,6 +408,27 @@
   <footer>
     <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
   </footer>
-
+  
+  <!-- JavaScript Scroll Animation using IntersectionObserver -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll("section");
+      const options = {
+        threshold: 0.1
+      };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </body>
 </html>
