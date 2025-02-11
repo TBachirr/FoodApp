@@ -3,163 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/menu.css">
   <title>Taste of Africa - Menu</title>
   <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background: #f5f5f5; /* Softer off-white background */
-      color: #333;
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease-in-out;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
-    
-    /* Highlight Class */
-    .highlight {
-      color: #f1c40f; /* Yellow accent */
-    }
-    
-    /* Header */
-    header {
-      background: #000; /* Changed to solid black */
-      padding: 20px 0;
-      color: #fff;
-    }
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin-left: 20px;
-    }
-    nav a {
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #f1c40f; /* Yellow accent */
-    }
-    
-    /* Banner Section */
-    #banner {
-      background: #000; /* Plain black background */
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-    }
-    #banner h2 {
-      font-size: 48px;
-      margin: 0;
-    }
-    
-    /* Menu Sections */
-    .menu-section {
-      padding: 60px 0;
-      background: #f5f5f5; /* Consistent off-white background */
-    }
-    .menu-section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .menu-item {
-      background: #fff;
-      margin: 10px;
-      padding: 20px;
-      flex: 1 1 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-radius: 5px;
-      border-top: 4px solid #f1c40f; /* Yellow accent border */
-    }
-    .menu-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(241,196,15,0.4); /* Yellow accent shadow */
-    }
-    .menu-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-    .menu-item h3 {
-      margin: 15px 0 10px;
-      font-size: 24px;
-    }
-    .menu-item p {
-      font-size: 16px;
-      margin: 0 0 10px;
-    }
-    .menu-item .price {
-      font-size: 18px;
-      font-weight: bold;
-      color: #f1c40f; /* Yellow accent */
-    }
-    .order-btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #000; /* Matches header */
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-      text-align: center;
-    }
-    .order-btn:hover {
-      background: #f1c40f;
-      color: #000;
-    }
-    
-    /* Footer */
-    footer {
-      background: #000; /* Solid black */
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
-      nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-      }
-      nav li {
-        margin: 10px 0;
-      }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
     }
   </style>
 </head>
@@ -184,7 +38,6 @@
   <!-- Banner Section -->
   <section id="banner">
     <div class="banner-content">
-      <!-- Preserve full text; wrap only the word "Menu" in a span -->
       <h2>Our Exquisite <span class="highlight">Menu</span></h2>
     </div>
   </section>
@@ -192,7 +45,6 @@
   <!-- Starters Section -->
   <section class="menu-section" id="starters">
     <div class="container">
-      <!-- Preserve text; wrap "Starters" -->
       <h2>Our <span class="highlight">Starters</span></h2>
       <div class="menu-items">
         <div class="menu-item">
@@ -216,7 +68,6 @@
   <!-- Main Courses Section -->
   <section class="menu-section" id="main-courses">
     <div class="container">
-      <!-- Preserve text; wrap "Courses" (or "Main Courses") -->
       <h2>Our Main <span class="highlight">Courses</span></h2>
       <div class="menu-items">
         <div class="menu-item">
@@ -247,7 +98,6 @@
   <!-- Desserts Section -->
   <section class="menu-section" id="desserts">
     <div class="container">
-      <!-- Preserve text; wrap "Desserts" -->
       <h2>Our <span class="highlight">Desserts</span></h2>
       <div class="menu-items">
         <div class="menu-item">
@@ -271,7 +121,6 @@
   <!-- Drinks Section -->
   <section class="menu-section" id="drinks">
     <div class="container">
-      <!-- Preserve text; wrap "Drinks" -->
       <h2>Our <span class="highlight">Drinks</span></h2>
       <div class="menu-items">
         <div class="menu-item">
@@ -297,9 +146,28 @@
     <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
   </footer>
   
-  <!-- JavaScript: Intercept Order Now clicks and show a popup -->
+  <!-- JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      // Intersection Observer Animation
+      const sections = document.querySelectorAll("section");
+      const options = {
+        threshold: 0.1
+      };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      // Order Button Popup
       const orderButtons = document.querySelectorAll('.order-btn');
       orderButtons.forEach(function(btn) {
         btn.addEventListener('click', function(e) {

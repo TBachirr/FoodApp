@@ -3,183 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/about.css">
   <title>Taste of Africa - About Us</title>
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f5f5f5; /* Softer off-white background */
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
-    
-    /* Highlight Class */
-    .highlight {
-      color: #f1c40f; /* Yellow accent */
-    }
-    
-    /* Header */
-    header {
-      background: #000; /* Solid black to match Home page */
-      padding: 20px 0;
-      color: #fff;
-    }
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin-left: 20px;
-    }
-    nav a {
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #f1c40f; /* Yellow accent */
-    }
-    
-    /* Banner Section (Updated to match Home page hero style) */
-    #banner {
-      background: #000; /* Solid black background */
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-    }
-    #banner h2 {
-      font-size: 48px;
-      margin: 0;
-    }
-    
-    /* Our Story Section */
-    #our-story {
-      padding: 60px 20px;
-      background: #f5f5f5;
-      text-align: center;
-    }
-    #our-story h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    #our-story p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-    }
-    
-    /* Our Mission Section */
-    #our-mission {
-      padding: 60px 20px;
-      background: #f5f5f5;
-      text-align: center;
-    }
-    #our-mission h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    #our-mission p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-    }
-    
-    /* Our Team Section */
-    #our-team {
-      padding: 60px 20px;
-      background: #f5f5f5;
-      text-align: center;
-    }
-    #our-team h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-    .team-members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .team-member {
-      background: #fff; /* White card for contrast */
-      margin: 10px;
-      padding: 20px;
-      flex: 1 1 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-radius: 5px;
-      transition: transform 0.3s;
-      border-top: 4px solid #f1c40f; /* Yellow accent border */
-    }
-    .team-member:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(241,196,15,0.4); /* Yellow accent shadow */
-    }
-    .team-member img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-    .team-member h3 {
-      margin: 10px 0 5px;
-      font-size: 24px;
-    }
-    .team-member p {
-      font-size: 16px;
-      color: #777;
-    }
-    
-    /* Footer */
-    footer {
-      background: #000; /* Solid black */
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
-      nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-      }
-      nav li {
-        margin: 10px 0;
-      }
-      .team-members {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -207,7 +32,7 @@
   </section>
 
   <!-- Our Story Section -->
-  <section id="our-story">
+  <section id="our-story" class="story-section">
     <div class="container">
       <h2>Our <span class="highlight">Story</span></h2>
       <p>
@@ -217,7 +42,7 @@
   </section>
 
   <!-- Our Mission Section -->
-  <section id="our-mission">
+  <section id="our-mission" class="mission-section">
     <div class="container">
       <h2>Our <span class="highlight">Mission</span></h2>
       <p>
@@ -227,7 +52,7 @@
   </section>
 
   <!-- Our Team Section -->
-  <section id="our-team">
+  <section id="our-team" class="team-section">
     <div class="container">
       <h2>Meet Our <span class="highlight">Team</span></h2>
       <div class="team-members">
@@ -254,6 +79,35 @@
   <footer>
     <p>&copy; 2025 Taste of Africa Restaurant. All Rights Reserved.</p>
   </footer>
+
+  <!-- JavaScript for Scroll Animation -->
+  <script>
+    // JavaScript to trigger animation when in viewport
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select the elements to animate
+      const storySection = document.querySelector(".story-section");
+      const missionSection = document.querySelector(".mission-section");
+      const teamSection = document.querySelector(".team-section");
+
+      // Function to add 'visible' class when element is in view
+      const observerOptions = {
+        threshold: 0.25, // Trigger when 25% of element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add the visible class to trigger animation
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(storySection); // Observe the story section
+      observer.observe(missionSection); // Observe the mission section
+      observer.observe(teamSection); // Observe the team section
+    });
+  </script>
 
 </body>
 </html>
